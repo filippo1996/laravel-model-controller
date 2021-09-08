@@ -20487,7 +20487,7 @@ var render = function() {
           staticClass: "content col-2",
           on: {
             click: function($event) {
-              return _vm.showComics(key)
+              return _vm.showComics(comics.id)
             }
           }
         },

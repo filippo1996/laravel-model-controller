@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div v-for="(comics, key) in comicBooks" :key="key" @click="showComics(key)" class="content col-2">
+        <div v-for="(comics, key) in comicBooks" :key="key" @click="showComics(comics.id)" class="content col-2">
             <div class="card">
                 <img :src="comics.thumb" :alt="comics.title">
             </div>
