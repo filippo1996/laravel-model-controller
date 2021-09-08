@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+// New version use the models end controllers
+Route::get('/comic-books', [ComicController::class, 'index']);
+
+Route::get('/comics/{comic}', [ComicController::class, 'show']);
+
+/*
 Route::get('/comic-books', function(){
     // Da inserire nel controller
     return config('db_factory');
@@ -29,3 +37,4 @@ Route::get('/comics/{id}', function($id=''){
         return config('db_factory')[$id];
     }
 });
+*/
